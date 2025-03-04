@@ -19,7 +19,6 @@ public class TabellMengde<T> implements MengdeADT<T>{
 		antall = 0;
 	}
 	
-	// metode for å utvide kapasiteten til tabell dersom den blir full
 	@SuppressWarnings("unchecked")
 	private void utvidKapasitet() {
 		// opretter ny array med dobbelt så stor plass

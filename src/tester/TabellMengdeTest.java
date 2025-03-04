@@ -1,4 +1,4 @@
-package mengder;
+package tester;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -6,6 +6,9 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import mengder.MengdeADT;
+import mengder.TabellMengde;
 
 class TabellMengdeTest {
     private TabellMengde<Integer> mengde;
