@@ -132,6 +132,7 @@ class TabellMengdeTest {
         assertTrue(Arrays.asList(tabell).contains(1));
         assertTrue(Arrays.asList(tabell).contains(2));
     }
+    
 
     @Test
     void testAntallElementer() {
