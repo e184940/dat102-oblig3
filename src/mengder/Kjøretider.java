@@ -21,7 +21,7 @@ public class Kjøretider {
 		long sluttTid; 
 		
 		
-		// i
+		// I
 		System.out.println("inneholder(): ");
 		startTid = System.nanoTime();
 		Lmengde1.inneholder(500);
@@ -36,7 +36,16 @@ public class Kjøretider {
 		System.out.println("Kjøretid for TabellMengde: " + (sluttTid - startTid) + " nanosekund");
 		System.out.println();
 		
-		// ii
+		/*
+		 * TabellMengde: 
+		 * Best case - O(1), element er i start av tabell
+		 * Worst case - O(n),element fins ikke eller er i slutt av tabell
+		 * LenketMengde:
+		 * Best case - O(1), element er i start av tabell
+		 * Worst case - O(n),element fins ikke eller er i slutt av tabell
+		 */
+		
+		// II
 		System.out.println("erDelmengdeAv(): ");
 		startTid = System.nanoTime();
 		Lmengde1.erDelmengdeAv(Lmengde2);
@@ -51,7 +60,16 @@ public class Kjøretider {
 		System.out.println("Kjøretid for TabellMengde: " + (sluttTid - startTid) + " nanosekunder");
 		System.out.println();
 		
-		// iii
+		/*
+		 * TabellMengde:
+		 * Best case - O(1), dersom mengde er tom
+		 * Worst case - O(n * m), for hvert n-te element i mengden må man sjekke hvert m-te element i andre mengden
+		 * LenketMengde:
+		 * Best case - O(1), dersom mengde er tom
+		 * Worst case - O(n*m), for hvert n-te element i mengden må man sjekke hvert m-te element i andre mengden
+		 */
+		
+		// III
 		System.out.println("erLik(): ");
 		startTid = System.nanoTime();
 		Lmengde1.erLik(Lmengde2);
@@ -63,8 +81,65 @@ public class Kjøretider {
 		Tmengde1.erLik(Tmengde2);
 		sluttTid = System.nanoTime();
 		
-		System.out.println("Kjøretid for tabellMengde: " + (sluttTid - startTid) + " nanosekunder");
+		System.out.println("Kjøretid for TabellMengde: " + (sluttTid - startTid) + " nanosekunder");
 		System.out.println();
+		
+		/*
+		 * TabellMengde:
+		 * Best case - O(1), dersom antall element er ulikt
+		 * Worst case - O(n * m), må sjekke at hvert element n og m i mengdene er like
+		 * LenketMengde:
+		 * Best case - O(1), dersom antall element er ulikt
+		 * Worst case - O(n * m), må sjekke at hvert element n og m i mengdene er like
+		 */
+		
+		// IV
+		System.out.println("union(): ");
+		startTid = System.nanoTime();
+		Lmengde1.union(Lmengde2);
+		sluttTid = System.nanoTime();
+		
+		System.out.println("Kjøretid for LenketMengde: " + (sluttTid - startTid) + " nanosekunder");
+		
+		startTid = System.nanoTime();
+		Tmengde1.union(Tmengde2);
+		sluttTid = System.nanoTime();
+		
+		System.out.println("Kjøretid for TabellMengde: " + (sluttTid - startTid) + " nanosekunder");
+		System.out.println();
+		
+		/*
+		 * TabellMengde: 
+		 * Best case - O(n + m), dersom ingen elementer overlappen
+		 * Worst case - O(n * m), dersom alle overlapper og man må sjekke for duplikater
+		 * LenketMengde:
+		 * Best case - O(n + m), dersom ingen elementer overlappen
+		 * Worst case - O(n * m), dersom alle overlapper og man må sjekke for duplikater
+		 */
+		
+		// V
+		System.out.println("fjern(): ");
+		startTid = System.nanoTime();
+		Lmengde1.fjern(700);
+		sluttTid = System.nanoTime();
+		
+		System.out.println("Kjøretid for LenketMengde: " + (sluttTid - startTid) + " nanosekunder");
+		
+		startTid = System.nanoTime();
+		Tmengde1.fjern(700);
+		sluttTid = System.nanoTime();
+		
+		System.out.println("Kjøretid for TabellMengde: " + (sluttTid - startTid) + " nanosekunder");
+		System.out.println();
+		
+		/*
+		 * TabellMengde:
+		 * Best case - O(1), element er i start av tabell
+		 * Worst case - O(n),element fins ikke eller er i slutt av tabell
+		 * LenketMengde:
+		 * Best case - O(1), element er i start av tabell
+		 * Worst case - O(n),element fins ikke eller er i slutt av tabell
+		 */
 	}
 
 }
