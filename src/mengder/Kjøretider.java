@@ -39,10 +39,12 @@ public class Kjøretider {
 		/*
 		 * TabellMengde: 
 		 * Best case - O(1), element er i start av tabell
-		 * Worst case - O(n),element fins ikke eller er i slutt av tabell
+		 * Avg case - O(n), søk gjennom halve mengden
+		 * Worst case - O(n), element fins ikke eller er i slutt av mengde
 		 * LenketMengde:
 		 * Best case - O(1), element er i start av tabell
-		 * Worst case - O(n),element fins ikke eller er i slutt av tabell
+		 * Avg case - O(n), søk gjennom halve mengden
+		 * Worst case - O(n),element fins ikke eller er i slutt av mengde
 		 */
 		
 		
@@ -64,9 +66,11 @@ public class Kjøretider {
 		/*
 		 * TabellMengde:
 		 * Best case - O(1), dersom mengde er tom
+		 * Avg case - o(n * m), for hvert element i mengden, må man søke gjennom halve elementene i den andre mengden
 		 * Worst case - O(n * m), for hvert n-te element i mengden må man sjekke hvert m-te element i andre mengden
 		 * LenketMengde:
-		 * Best case - O(1), dersom mengde er tom
+		 * Best case - O(1), dersom mengde er tom		 
+		 * Avg case - o(n * m), for hvert element i mengden, må man søke gjennom halve elementene i den andre mengden
 		 * Worst case - O(n*m), for hvert n-te element i mengden må man sjekke hvert m-te element i andre mengden
 		 */
 		
@@ -89,9 +93,11 @@ public class Kjøretider {
 		/*
 		 * TabellMengde:
 		 * Best case - O(1), dersom antall element er ulikt
+		 * Avg case - O(n * m), for hvert element i mengden, må man søke gjennom halve elementene i den andre mengden
 		 * Worst case - O(n * m), må sjekke at hvert element n og m i mengdene er like
 		 * LenketMengde:
 		 * Best case - O(1), dersom antall element er ulikt
+		 * Avg case - O(n * m), for hvert element i mengden, må man søke gjennom halve elementene i den andre mengden
 		 * Worst case - O(n * m), må sjekke at hvert element n og m i mengdene er like
 		 */
 		
@@ -114,9 +120,11 @@ public class Kjøretider {
 		/*
 		 * TabellMengde: 
 		 * Best case - O(n + m), dersom ingen elementer overlappen
+		 * Avg case - O(n + m), dersom man legge til alle elementene fra begge mengdene
 		 * Worst case - O(n * m), dersom alle overlapper og man må sjekke for duplikater
 		 * LenketMengde:
 		 * Best case - O(n + m), dersom ingen elementer overlappen
+		 * Avg case - O(n + m), dersom man legger til alle elementene fra begge mengdene
 		 * Worst case - O(n * m), dersom alle overlapper og man må sjekke for duplikater
 		 */
 		
@@ -139,10 +147,12 @@ public class Kjøretider {
 		/*
 		 * TabellMengde:
 		 * Best case - O(1), element er i start av tabell
-		 * Worst case - O(n),element fins ikke eller er i slutt av tabell
+		 * Avg case - O(n), søk gjennom halve tabell
+		 * Worst case - O(n), element fins ikke eller er i slutt av tabell
 		 * LenketMengde:
 		 * Best case - O(1), element er i start av tabell
-		 * Worst case - O(n),element fins ikke eller er i slutt av tabell
+		 * Avg case - O(n), søk gjennom halve tabell
+		 * Worst case - O(n), element fins ikke eller er i slutt av tabell
 		 */
 	}
 
