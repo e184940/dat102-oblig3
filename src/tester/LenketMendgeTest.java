@@ -1,11 +1,15 @@
 package tester;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Arrays;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import mengder.LenketMengde;
 import mengder.MengdeADT;
+import mengder.TabellMengde;
 
 class LenketMendgeTest {
 
@@ -31,45 +35,13 @@ class LenketMendgeTest {
     }
 
     @Test
-    public void testLeggTil() {
-        mengde.leggTil(1);
-        assertEquals(1, mengde.antallElementer());
-        mengde.leggTil(2);
-        assertEquals(2, mengde.antallElementer());
-        mengde.leggTil(1); 
-        assertEquals(2, mengde.antallElementer());
-    }
-
-    @Test
-    public void testFjern() {
-        mengde.leggTil(1);
-        mengde.leggTil(2);
-        assertEquals(2, mengde.antallElementer());
-        assertEquals(1, mengde.fjern(1));
-        assertEquals(1, mengde.antallElementer());
-        assertNull(mengde.fjern(3)); 
-    }
-
-    @Test
-    public void testTilTabell() {
-        mengde.leggTil(1);
-        mengde.leggTil(2);
-        Integer[] tabell = mengde.tilTabell();
-        assertEquals(2, tabell.length);
-        assertTrue(tabell[0] == 1 || tabell[0] == 2);
-        assertTrue(tabell[1] == 1 || tabell[1] == 2);
-    }
-
-    @Test
     public void testErDelmengdeAv() {
         LenketMengde<Integer> annenMengde = new LenketMengde<>();
-        mengde.leggTil(1);
-        mengde.leggTil(2);
         annenMengde.leggTil(1);
         annenMengde.leggTil(2);
-        annenMengde.leggTil(3);
+        mengde.leggTil(1);
         assertTrue(mengde.erDelmengdeAv(annenMengde));
-        annenMengde.fjern(1);
+        mengde.leggTil(3);
         assertFalse(mengde.erDelmengdeAv(annenMengde));
     }
 
@@ -84,7 +56,7 @@ class LenketMendgeTest {
         annenMengde.leggTil(3);
         assertFalse(mengde.erLik(annenMengde));
     }
-
+    
     @Test
     public void testErDisjunkt() {
         LenketMengde<Integer> annenMengde = new LenketMengde<>();
@@ -121,7 +93,7 @@ class LenketMendgeTest {
         assertTrue(unionMengde.inneholder(2));
         assertTrue(unionMengde.inneholder(3));
     }
-
+    
     @Test
     public void testMinus() {
         LenketMengde<Integer> annenMengde = new LenketMengde<>();
@@ -134,6 +106,35 @@ class LenketMendgeTest {
         assertFalse(minusMengde.inneholder(2));
         assertFalse(minusMengde.inneholder(3));
 	}
+
+    @Test
+    public void testLeggTil() {
+        mengde.leggTil(1);
+        assertEquals(1, mengde.antallElementer());
+        mengde.leggTil(2);
+        assertEquals(2, mengde.antallElementer());
+        mengde.leggTil(1); 
+        assertEquals(2, mengde.antallElementer());
+    }
+
+    @Test
+    public void testFjern() {
+        mengde.leggTil(1);
+        assertEquals(1, mengde.fjern(1));
+        assertFalse(mengde.inneholder(1));
+        assertNull(mengde.fjern(2));  
+    }
+
+    @Test
+    public void testTilTabell() {
+        mengde.leggTil(1);
+        mengde.leggTil(2);
+        Object[] tabell = mengde.tilTabell();
+        assertEquals(2, tabell.length);
+        assertTrue(Arrays.asList(tabell).contains(1));
+        assertTrue(Arrays.asList(tabell).contains(2));
+    }
+
     
     @Test
     public void testAntallElementer() {
