@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 
 import mengder.JavaSetToMengde;
 import mengder.MengdeADT;
-import mengder.TabellMengde;
 
 class JavaSetToMengdeTest {
 	

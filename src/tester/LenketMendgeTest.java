@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 
 import mengder.LenketMengde;
 import mengder.MengdeADT;
-import mengder.TabellMengde;
 
 class LenketMendgeTest {
 
