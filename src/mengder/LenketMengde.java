@@ -193,7 +193,7 @@ public class LenketMengde<T> implements MengdeADT<T> {
 		@SuppressWarnings("unchecked")
 		// oppretter tabell for å lagre element
 		T[] tabell = (T[]) new Object[antall];
-		Node aktiv = forste;
+		Node aktiv = forste; 
 		int indx = 0;
 		
 		// itererer gjennom alle noder

@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import mengder.JavaSetToMengde;
 import mengder.MengdeADT;
+import mengder.TabellMengde;
 
 class JavaSetToMengdeTest {
 	
@@ -124,6 +125,15 @@ class JavaSetToMengdeTest {
 		mengde.leggTil(1);
 		assertEquals(2, mengde.antallElementer());
 	}
+	
+    @Test
+    void testLeggTilAlleFra() {
+        annenMengde.leggTil(1);
+        annenMengde.leggTil(2);
+        mengde.leggTilAlleFra(annenMengde);
+        assertTrue(mengde.inneholder(1));
+        assertTrue(mengde.inneholder(2));
+    }
 	
 	@Test
 	void testFjern() {

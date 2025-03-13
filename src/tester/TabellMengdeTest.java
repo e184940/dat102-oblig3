@@ -12,10 +12,13 @@ import mengder.TabellMengde;
 
 class TabellMengdeTest {
     private TabellMengde<Integer> mengde;
+    private TabellMengde<Integer> annenMengde;
+
 
     @BeforeEach
     void testTab() {
         mengde = new TabellMengde<>();
+        annenMengde = new TabellMengde<>();
     }
 
     @Test
@@ -34,7 +37,6 @@ class TabellMengdeTest {
 
     @Test
     void testErDelmengdeAv() {
-        TabellMengde<Integer> annenMengde = new TabellMengde<>();
         annenMengde.leggTil(1);
         annenMengde.leggTil(2);
         mengde.leggTil(1);
@@ -45,7 +47,6 @@ class TabellMengdeTest {
 
     @Test
     void testErLik() {
-        TabellMengde<Integer> annenMengde = new TabellMengde<>();
         mengde.leggTil(1);
         annenMengde.leggTil(1);
         assertTrue(mengde.erLik(annenMengde));
@@ -55,7 +56,6 @@ class TabellMengdeTest {
 
     @Test
     void testErDisjunkt() {
-        TabellMengde<Integer> annenMengde = new TabellMengde<>();
         mengde.leggTil(1);
         annenMengde.leggTil(2);
         assertTrue(mengde.erDisjunkt(annenMengde));
@@ -65,7 +65,6 @@ class TabellMengdeTest {
 
     @Test
     void testSnitt() {
-        TabellMengde<Integer> annenMengde = new TabellMengde<>();
         mengde.leggTil(1);
         mengde.leggTil(2);
         annenMengde.leggTil(2);
@@ -78,7 +77,6 @@ class TabellMengdeTest {
 
     @Test
     void testUnion() {
-        TabellMengde<Integer> annenMengde = new TabellMengde<>();
         mengde.leggTil(1);
         annenMengde.leggTil(2);
         MengdeADT<Integer> unionMengde = mengde.union(annenMengde);
@@ -88,7 +86,6 @@ class TabellMengdeTest {
 
     @Test
     void testMinus() {
-        TabellMengde<Integer> annenMengde = new TabellMengde<>();
         mengde.leggTil(1);
         mengde.leggTil(2);
         annenMengde.leggTil(2);
@@ -107,7 +104,6 @@ class TabellMengdeTest {
 
     @Test
     void testLeggTilAlleFra() {
-        TabellMengde<Integer> annenMengde = new TabellMengde<>();
         annenMengde.leggTil(1);
         annenMengde.leggTil(2);
         mengde.leggTilAlleFra(annenMengde);
