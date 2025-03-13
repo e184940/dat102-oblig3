@@ -47,6 +47,8 @@ public class LenketMengde<T> implements MengdeADT<T> {
 		return funnet;
 	}
 
+	
+	// TODO !!!
 	@Override
 	public boolean erDelmengdeAv(MengdeADT<T> annenMengde) {
 		Node aktiv = forste;
@@ -167,6 +169,8 @@ public class LenketMengde<T> implements MengdeADT<T> {
 		}
 	}
 
+	
+	// TODO !!!
 	@Override
 	public T fjern(T element) {
 		// lagrer referanse til elelment som slettes
@@ -182,6 +186,8 @@ public class LenketMengde<T> implements MengdeADT<T> {
 		return fjernetElement;
 	}
 
+	
+	// TODO !!!
 	@Override
 	public T[] tilTabell() {
 		@SuppressWarnings("unchecked")

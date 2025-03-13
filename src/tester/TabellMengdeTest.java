@@ -101,7 +101,7 @@ class TabellMengdeTest {
     void testLeggTil() {
         mengde.leggTil(1);
         assertTrue(mengde.inneholder(1));
-        mengde.leggTil(1); // Duplicate element
+        mengde.leggTil(1); 
         assertEquals(1, mengde.antallElementer());
     }
 

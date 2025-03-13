@@ -36,7 +36,7 @@ class LenketMendgeTest {
         assertEquals(1, mengde.antallElementer());
         mengde.leggTil(2);
         assertEquals(2, mengde.antallElementer());
-        mengde.leggTil(1); // Duplicate element
+        mengde.leggTil(1); 
         assertEquals(2, mengde.antallElementer());
     }
 
