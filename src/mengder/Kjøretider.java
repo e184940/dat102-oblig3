@@ -21,7 +21,7 @@ public class Kjøretider {
 		long sluttTid; 
 		
 		
-		// I
+		// I - inneholder()
 		System.out.println("inneholder(): ");
 		startTid = System.nanoTime();
 		Lmengde1.inneholder(500);
@@ -45,7 +45,8 @@ public class Kjøretider {
 		 * Worst case - O(n),element fins ikke eller er i slutt av tabell
 		 */
 		
-		// II
+		
+		// II - erDelmengdeAv()
 		System.out.println("erDelmengdeAv(): ");
 		startTid = System.nanoTime();
 		Lmengde1.erDelmengdeAv(Lmengde2);
@@ -69,7 +70,8 @@ public class Kjøretider {
 		 * Worst case - O(n*m), for hvert n-te element i mengden må man sjekke hvert m-te element i andre mengden
 		 */
 		
-		// III
+		
+		// III - erLik()
 		System.out.println("erLik(): ");
 		startTid = System.nanoTime();
 		Lmengde1.erLik(Lmengde2);
@@ -93,7 +95,8 @@ public class Kjøretider {
 		 * Worst case - O(n * m), må sjekke at hvert element n og m i mengdene er like
 		 */
 		
-		// IV
+		
+		// IV - union()
 		System.out.println("union(): ");
 		startTid = System.nanoTime();
 		Lmengde1.union(Lmengde2);
@@ -117,7 +120,8 @@ public class Kjøretider {
 		 * Worst case - O(n * m), dersom alle overlapper og man må sjekke for duplikater
 		 */
 		
-		// V
+		
+		// V - fjern()
 		System.out.println("fjern(): ");
 		startTid = System.nanoTime();
 		Lmengde1.fjern(700);
