@@ -25,18 +25,16 @@ public class HobbyMatchMain {
 	}
 	
 	private static int antallFelles(Person a, Person b) {
-		//System.out.println("Antall felles er: " + (a.getHobby().snitt(b.getHobby())).antallElementer());
 		return (a.getHobby().snitt(b.getHobby())).antallElementer();
 	}
 	
 	private static int antallUnik(Person a, Person b) {
-		//System.out.println("Antall Unik: " + (a.getHobby().minus(b.getHobby())).antallElementer());
 		return (a.getHobby().minus(b.getHobby())).antallElementer();
 	}
+
 	
 	private static int antallTotal(Person a, Person b) {
-		//System.out.println(a.getHobby().antallElementer() + b.getHobby().antallElementer());
-		return (a.getHobby().antallElementer() + b.getHobby().antallElementer());
+	    return a.getHobby().union(b.getHobby()).antallElementer();
 	}
 	
 	private static double match(Person a, Person b) {
