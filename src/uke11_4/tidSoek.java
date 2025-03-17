@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class tidSoek {
     private static final int N_ELEMENTS = 100_000;
-    private static final int N_SEARCHES = 10_000; // Ved å øke til 100 000 får man at HashSet har lavere gjennomsnitt
+    private static final int N_SEARCHES = 25_000;
     private static final int UPPER_BOUND = 1_000_000;
     private static final int MEASUREMENT_RUNS = 10;
 
