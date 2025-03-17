@@ -40,8 +40,12 @@ public class HobbyMatchMain {
 	}
 	
 	private static double match(Person a, Person b) {
-		double match = (antallFelles(a, b) - antallUnik(a, b) + antallUnik(b, a) / antallTotal(a, b));
-		return match;
+	    double felles = antallFelles(a, b);
+	    double unikA = antallUnik(a, b);
+	    double unikB = antallUnik(b, a);
+	    double totalt = antallTotal(a, b);
+
+	    return felles - ((unikA + unikB) / totalt);
 	}
 
 }
