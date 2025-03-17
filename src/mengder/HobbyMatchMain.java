@@ -4,8 +4,10 @@ public class HobbyMatchMain {
 
 	public static void main(String[] args) {
 		Person åse = new Person("Åse", "Fiske", "TikTok", "GPT");
-		Person per = new Person("Per", "Fiske", "Kjefte", "Danse");
+		Person per = new Person("Per", "Brus", "Kjefte", "Danse"); // Denne har ingen til felles med noen
 		Person asle = new Person("Asle", "Trene", "TikTok", "GPT");
+		
+		System.out.println("Tester match formel:");
 		
 		// sjekke om p1 og p2 gir samme score
 		System.out.println("De her skal gi samme score:");
@@ -15,6 +17,10 @@ public class HobbyMatchMain {
 		// Asle er perfekt match for Asle
 		System.out.println("Asle er perfekt match for Asle");
 		System.out.println(match(asle, asle));
+		
+		// Asle og Åse har to hobbyer til felles
+		System.out.println("Åse og Asle har to hobbyer til felles: ");
+		System.out.println(match(asle, åse));
 		
 	}
 	
