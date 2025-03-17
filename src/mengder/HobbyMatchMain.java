@@ -10,6 +10,12 @@ public class HobbyMatchMain {
 		System.out.println(match(åse, asle));
 		System.out.println(match(åse, per));
 		System.out.println(match(per, asle));
+		System.out.println(match(asle, asle));
+		
+		// sjekke om p1 og p2 gir samme score
+		System.out.println("De her skal gi samme score:");
+		System.out.println(match(åse, per));
+		System.out.println(match(per, åse));
 		
 	}
 	
