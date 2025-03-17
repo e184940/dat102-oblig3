@@ -7,15 +7,14 @@ public class HobbyMatchMain {
 		Person per = new Person("Per", "Fiske", "Kjefte", "Danse");
 		Person asle = new Person("Asle", "Trene", "TikTok", "GPT");
 		
-		System.out.println(match(åse, asle));
-		System.out.println(match(åse, per));
-		System.out.println(match(per, asle));
-		System.out.println(match(asle, asle));
-		
 		// sjekke om p1 og p2 gir samme score
 		System.out.println("De her skal gi samme score:");
 		System.out.println(match(åse, per));
 		System.out.println(match(per, åse));
+		
+		// Asle er perfekt match for Asle
+		System.out.println("Asle er perfekt match for Asle");
+		System.out.println(match(asle, asle));
 		
 	}
 	
