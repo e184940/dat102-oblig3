@@ -6,6 +6,8 @@ public class Person {
 	private TabellMengde<String> hobbyer;
 	
 	public Person(String navn, String ... hobbyer) {
+		this.navn = navn;
+		
 		this.hobbyer = new TabellMengde<String>();
 		
 		for (int i = 0; i < hobbyer.length; i++) {
