@@ -15,7 +15,7 @@ public class HobbyMatchMain {
 		System.out.println(match(per, åse));
 		
 		// Asle er perfekt match for Asle
-		System.out.println("Asle er perfekt match for Asle");
+		System.out.println("Asle er perfekt match for Asle:");
 		System.out.println(match(asle, asle));
 		
 		// Asle og Åse har to hobbyer til felles
